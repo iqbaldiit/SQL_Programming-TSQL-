@@ -1,1 +1,1 @@
-# SQL_Programming
+# This repo is for sample of big query, process and logics. I wrote several complex query, analytical report and process like Payroll, Attendance, Inventory tracking and many more. I am trying to upload some sample of my work here.  
