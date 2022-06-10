@@ -45,6 +45,11 @@ SELECT * FROM (
 SELECT Emp.EmployeeName,Emp.Salary, DENSE_RANK() OVER (ORDER BY SALARY DESC) AS Position FROM @tbl_Employee Emp) tab
 WHERE tab.Position=1; -- Now you can set highest, 2nd highest, 3rd highest and what you desire 
 
+--for getting null if not exists just add max like following
+SELECT MAX(tab.Salary) FROM (
+SELECT Emp.EmployeeName,Emp.Salary, DENSE_RANK() OVER (ORDER BY SALARY DESC) AS Position FROM @tbl_Employee Emp) tab
+WHERE tab.Position=1; -- Now you can set highest, 2nd highest, 3rd highest and what you desire 
+
 --Get Highest Value using CTE (Common Table Expression)
 WITH Result AS 
 (
